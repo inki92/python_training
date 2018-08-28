@@ -1,0 +1,12 @@
+text_string = "I think, on the world we can ship 5 COMPUTERS."
+print("Original:")
+print(text_string)
+print("Original in upper registry:")
+print(text_string.upper())
+print("Original in low registry:")
+print(text_string.lower())
+print("Like a title:")
+print(text_string.title())
+print("With replace:")
+print(text_string.replace("5", "10000"))
+input("\nPress Enter to exit")

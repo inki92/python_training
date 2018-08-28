@@ -1,0 +1,12 @@
+quote = "I think, on the world we can ship 5 COMPUTERS."
+print("Original:")
+print(quote)
+print("Original in upper registry:")
+print(quote.upper())
+print("Original in low registry:")
+print(quote.lower())
+print("Like a title:")
+print(quote.title())
+print("With replace:")
+print(quote.replace("5", "10000"))
+input("\nPress Enter to exit")

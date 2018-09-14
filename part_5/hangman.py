@@ -98,8 +98,8 @@ _________
 ================
 """)
 MAX_WRONG = len(HANGMAN) - 1
-WORDS = ("ball", "dog", "god", "kitten")
-word = random.choise(WORDS)
+WORDS = ("BALL", "DOG", "KITTEN")
+word = random.choice(WORDS)
 so_far = "-"*len(word)
 wrong = 0
 used = []
@@ -118,4 +118,19 @@ while wrong < MAX_WRONG and so_far != word:
     if guess in word:
         print("Yes!")
         new = ""
-        for i in range 
+        for i in range(len(word)):
+            if guess == word[i]:
+                new += guess
+            else:
+                new += so_far[i]
+
+        so_far = new
+    else:
+        print("Letter", guess, "was not in word")
+        wrong += 1
+if wrong == MAX_WRONG:
+    print(HANGMAN[wrong])
+    print("You are dead((\n")
+else:
+    print("You are winner!\n")
+print("Word is - ", word)
